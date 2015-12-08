@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>CSS animation</h1>
+					<h1>初探</h1>
+					<p>
+						<small>Created by <a href="https://github.com/zhangzhaoaaa">Mike Zhang</a></small>
+					</p>
+				</section>
+
+				<section >
+					<h2>大纲</h2>
+						<p>感受Animation</p>
+						<p>Why Animation</p>
+						<p>分析维度</p>
+						<p>案例说明</p>
+						<p>参考文献</p>
+				</section>
+
+				<section>
+					<h2>感受Animation</h2>
+						<p>左右翻转</p>
+						<p>上下翻转</p>
+						<p>放大缩小</p>
+						<p>上下移动</p>
+						<p><a href="https://jsfiddle.net/zeromike/kmgyrdvj/4/" target="_blank">Demo</a></p>
+						<p><a href="http://jsfiddle.net/zeromike/ct6sa8pk/" target="_blank">3D效果</a></p>
+				</section>
+
+				<section>
+						<section>
+							<h2>Why动画</h2>
+							<ol>
+								<li>What is Animation</li>
+								<li>Why uses Animation</li>
+							</ol>
+						</section>
+
+						<section>
+							<h2>What is Animation</h2>
+							<p>css动画是使元素从一种样式逐渐变化为另一种样式的效果</p>
+						</section>
+						<section>
+							<h2>Why uses Animation</h2>
+							<p>
+								人类的大脑总是关注移动的物体.因为人类有注意移动的物体这个自然的反应,
+								所以增加动画到网站或者APP中是一个吸引用户到产品的重要区域的强大方式,
+								并且可以增加用户的感兴趣程度.
+							</p>
+							<p>它可以取代许多网页动画图像/Flash动画/javaScript,优化界面</p>
+						</section>
+
+				</section>
+				<section >
+					<h2>坐标系</h2>
+					<p>
+						<img src="images/coordinates.png" alt=""/>
+					</p>
+					<p></p>
+				</section>
+				<section >
+					<h2>动画的组成部分</h2>
+					<p>
+						<img src="images/animationComprise.png" alt=""/>
+					</p>
+				</section>
+
+				<section>
+					<h2>维度分析</h2>
+					<section >
+						<h2>二维分析</h2>
+						<p>
+							2d空间是一个平面坐标系,包含X轴和Y轴,0点在屏幕左上角,X轴向右是正,Y轴向下是正,当用transform时,中心点变为屏幕中间;
+							二维空间动画是在X轴和Y轴方向上做的动画
+						</p>
+						<p>
+							translate()/
+							rotate()/
+							scale()/
+							skew()/
+							matrix()
+						</p>
+					</section>
+					<section >
+						<h2>三维分析</h2>
+						<p>
+							3d相比于2d来说,多了一个z轴,这个方向默认是正对于屏幕
+						</p>
+						<p>
+							对于一个立方体来说,front是rotateX(0);back是rotateX(-180deg);
+							right是rotateY(90deg);left是rotateY(-90deg);
+							top是rotateX(90deg);bottom是rotateX(-90deg);
+						</p>
+					</section>
+					<section>
+						<h2>3d动画方法</h2>
+						<p>
+							matrix3d(n,n,n,n,n,n,
+							n,n,n,n,n,n,n,n,n,n)/
+							translate3d(x,y,z)/
+							translateX(x)/
+							translateY(y)/
+							translateZ(z)/
+							scale3d(x,y,z)/
+							scaleX(x)/
+							scaleY(y)/
+							scaleZ(z)/
+							rotate3d(x,y,z,angle)/
+							rotateX(angle)/
+							rotateY(angle)/
+							rotateZ(angle)/
+							perspective(n)
+
+						</p>
+					</section>
+					<section >
+						<h2>维度理解工具</h2>
+						<p>
+							<a href="http://fangyexu.com/tool-CSS3Inspector.html" target="_blank">css</a>
+						</p>
+					</section>
+				</section>
+				<section>
+					<h2>案例说明</h2>
+					<p>移动的糖豆</p>
+					<p>翻动的卡片</p>
+					<p>魔幻立方体</p>
+				</section>
+				<section>
+					<h2>移动的糖豆</h2>
+					<p>
+						<a href="http://jsfiddle.net/zeromike/cpeph48o/" target="_blank">demo</a>
+					</p>
+				</section>
+				<section >
+					<h2>翻动的卡片</h2>
+					<p>
+						<a href="http://jsfiddle.net/zeromike/tpLy5ryw/1/" target="_blank">demo</a>
+					</p>
+				</section>
+				<section >
+					<h2>魔幻立方体</h2>
+					<p>
+						<a href="http://jsfiddle.net/zeromike/mytvLrvb/1/" target="_blank">demo</a>
+					</p>
+				</section>
+				<section >
+					<h2>参考文献</h2>
+					<ol>
+						<li><a href="https://developer.apple.com/library/safari/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Using2Dand3DTransforms/Using2Dand3DTransforms.html" target="_blank">Using 2D and 3D Transforms</a></li>
+						<li><a href="https://robots.thoughtbot.com/css-animation-for-beginners" target="_blank">css-animation-for-beginners</a></li>
+						<li><a href="http://desandro.github.io/3dtransforms/docs/cube.html" target="_blank">Intro to CSS 3D transforms</a></li>
+					</ol>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
